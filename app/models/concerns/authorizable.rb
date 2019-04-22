@@ -119,5 +119,9 @@ module Authorizable
         permissions.first.try(:name)
       end
     end
+
+    def authorized_resource
+      nil
+    end
   end
 end

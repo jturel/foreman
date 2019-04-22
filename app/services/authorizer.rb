@@ -169,7 +169,7 @@ class Authorizer
   end
 
   def resource_name(klass)
-    Permission.resource_name(klass)
+    klass.authorized_resource || Permission.resource_name(klass)
   end
 
   def base_ids
